@@ -24,8 +24,17 @@ int square(int i){
    return (i*i);
 }
 
-int cube(int j){
+int cube(int i){
    return (i*i*i);
+}
+
+float inverse(int i){
+   if(i!=0)
+	return 1.0/i;
+   else{
+        printf("The inverse does not exist.");
+	return 0;
+   }
 }
 
 int main() {
@@ -72,17 +81,17 @@ int main() {
             case '^':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("The result of %d ^2 is %d\n",square(a));
+                printf("The result of %d ^2 is %d\n",a,square(a));
                 break;
             case '#':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("The result of %d^3 is %d\n",cube(a));
+                printf("The result of %d^3 is %d\n",a,cube(a));
                 break;
             case 'i':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+                printf("The iverse of %d is %f\n",a,inverse(a));
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
